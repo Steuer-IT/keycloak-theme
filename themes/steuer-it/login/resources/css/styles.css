@@ -1,0 +1,79 @@
+/* ============================================
+   Steuer-IT Keycloak Login Theme
+   ============================================ */
+
+/* -- Custom Properties / Farben -- */
+:root {
+  --steuer-primary: #1a56db;
+  --steuer-primary-hover: #1442a8;
+  --steuer-bg: #181c28;
+  --steuer-card-bg: #1f2436;
+  --steuer-text: #e5e7eb;
+  --steuer-text-muted: #9ca3af;
+}
+
+/* -- Hintergrund -- */
+.login-pf body {
+  background: var(--steuer-bg) !important;
+}
+
+/* -- Keycloak-Logo ausblenden -- */
+div.kc-logo-text {
+  display: none !important;
+}
+
+/* -- Login-Card -- */
+.card-pf {
+  background-color: var(--steuer-card-bg) !important;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  color: var(--steuer-text);
+}
+
+.card-pf label,
+.card-pf .pf-c-form__label-text,
+.login-pf-header,
+h1#kc-page-title {
+  color: var(--steuer-text) !important;
+}
+
+.card-pf input[type="text"],
+.card-pf input[type="password"] {
+  background-color: #2a3040 !important;
+  border-color: #3a4050 !important;
+  color: var(--steuer-text) !important;
+}
+
+/* -- Logo-Bereich -- */
+#kc-header-wrapper {
+  font-size: 0;
+  padding: 2rem 0;
+}
+
+#kc-header-wrapper::before {
+  content: "";
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  background: url("../img/logo.png") center / contain no-repeat;
+}
+
+/* -- Buttons -- */
+.card-pf .pf-c-button.pf-m-primary,
+input[type="submit"].pf-c-button.pf-m-primary {
+  background-color: var(--steuer-primary);
+  border-color: var(--steuer-primary);
+}
+
+.card-pf .pf-c-button.pf-m-primary:hover,
+input[type="submit"].pf-c-button.pf-m-primary:hover {
+  background-color: var(--steuer-primary-hover);
+  border-color: var(--steuer-primary-hover);
+}
+
+/* -- Links -- */
+.card-pf a {
+  color: #60a5fa !important;
+}
