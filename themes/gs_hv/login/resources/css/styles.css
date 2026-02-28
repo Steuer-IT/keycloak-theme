@@ -1,0 +1,80 @@
+/* ============================================
+   GS HV Keycloak Login Theme
+   ============================================ */
+
+/* -- Custom Properties / Farben -- */
+:root {
+  --gs-hv-primary: #1a56db;
+  --gs-hv-primary-hover: #1442a8;
+  --gs-hv-bg: #ffffff;
+  --gs-hv-card-bg: #f3f4f6;
+  --gs-hv-text: #1f2937;
+  --gs-hv-text-muted: #6b7280;
+}
+
+/* -- Hintergrund -- */
+.login-pf body {
+  background: var(--gs-hv-bg) !important;
+}
+
+/* -- Keycloak-Logo ausblenden -- */
+div.kc-logo-text {
+  display: none !important;
+}
+
+/* -- Login-Card -- */
+.card-pf {
+  background-color: var(--gs-hv-card-bg) !important;
+  border-radius: 8px;
+  border: 1px solid #9ca3af;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+  color: var(--gs-hv-text);
+}
+
+.card-pf label,
+.card-pf .pf-c-form__label-text,
+.login-pf-header,
+h1#kc-page-title {
+  color: var(--gs-hv-text) !important;
+}
+
+.card-pf input[type="text"],
+.card-pf input[type="password"] {
+  background-color: #ffffff !important;
+  border-color: #9ca3af !important;
+  color: var(--gs-hv-text) !important;
+}
+
+/* -- Logo-Bereich -- */
+#kc-header-wrapper {
+  font-size: 0;
+  padding: 2rem 0;
+}
+
+#kc-header-wrapper::before {
+  content: "";
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  background: url("../img/hv_logo.png") center / contain no-repeat;
+}
+
+/* -- Buttons -- */
+.card-pf .pf-c-button.pf-m-primary,
+input[type="submit"].pf-c-button.pf-m-primary {
+  background-color: var(--gs-hv-primary);
+  border-color: var(--gs-hv-primary);
+}
+
+.card-pf .pf-c-button.pf-m-primary:hover,
+input[type="submit"].pf-c-button.pf-m-primary:hover {
+  background-color: var(--gs-hv-primary-hover);
+  border-color: var(--gs-hv-primary-hover);
+}
+
+/* -- Links -- */
+.card-pf a {
+  color: #1a56db !important;
+}

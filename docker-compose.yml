@@ -13,6 +13,7 @@ services:
       - "8080:8080"
     volumes:
       - ./themes/steuer-it:/opt/keycloak/themes/steuer-it
+      - ./themes/gs_hv:/opt/keycloak/themes/gs_hv
     depends_on:
       postgres:
         condition: service_healthy
